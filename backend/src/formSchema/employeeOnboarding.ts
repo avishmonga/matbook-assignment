@@ -1,0 +1,122 @@
+// Placeholder schema: please replace fields with the exact assignment schema
+export const employeeOnboardingSchema = {
+  title: "Employee Onboarding",
+  description:
+    "Please fill this form to complete onboarding. Fields marked * are required.",
+  fields: [
+    {
+      name: "fullName",
+      label: "Full Name",
+      type: "text",
+      placeholder: "Enter full name",
+      validation: { required: true, minLength: 3, maxLength: 80 },
+    },
+    {
+      name: "email",
+      label: "Work Email",
+      type: "text",
+      placeholder: "name@company.com",
+      validation: {
+        required: true,
+        regex: "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+      },
+    },
+    {
+      name: "employeeId",
+      label: "Employee ID",
+      type: "text",
+      placeholder: "EMP1234",
+      validation: {
+        required: true,
+        minLength: 3,
+        maxLength: 20,
+        regex: "^[A-Za-z0-9_-]+$",
+      },
+    },
+    {
+      name: "age",
+      label: "Age",
+      type: "number",
+      placeholder: "Enter age",
+      validation: { required: true, min: 18, max: 65 },
+    },
+    {
+      name: "department",
+      label: "Department",
+      type: "select",
+      placeholder: "Select department",
+      options: [
+        "engineering",
+        "product",
+        "design",
+        "marketing",
+        "sales",
+        "hr",
+        "operations",
+      ],
+      validation: { required: true },
+    },
+    {
+      name: "skills",
+      label: "Primary Skills",
+      type: "multi-select",
+      placeholder: "Select skills",
+      options: [
+        "js-ts",
+        "react",
+        "node",
+        "db",
+        "devops",
+        "ui-ux",
+        "data",
+      ],
+      validation: { required: true, minSelected: 1, maxSelected: 5 },
+    },
+    {
+      name: "joiningDate",
+      label: "Joining Date",
+      type: "date",
+      placeholder: "Select joining date",
+      validation: { required: true, minDate: "2020-01-01" },
+    },
+    {
+      name: "probationPeriodMonths",
+      label: "Probation Period (months)",
+      type: "number",
+      placeholder: "e.g. 3 months",
+      validation: { required: true, min: 1, max: 12 },
+    },
+    {
+      name: "workMode",
+      label: "Work Mode",
+      type: "select",
+      placeholder: "Select work mode",
+      options: ["onsite", "hybrid", "remote"],
+      validation: { required: true },
+    },
+    {
+      name: "equipmentRequired",
+      label: "Equipment Required",
+      type: "multi-select",
+      placeholder: "Select equipment",
+      options: ["laptop", "monitor", "peripherals", "headphones", "other"],
+      validation: { required: false, minSelected: 0, maxSelected: 4 },
+    },
+    {
+      name: "emergencyContactNumber",
+      label: "Emergency Contact Number",
+      type: "text",
+      placeholder: "10-digit phone number",
+      validation: { required: true, regex: "^[0-9]{10}$" },
+    },
+    {
+      name: "about",
+      label: "About You",
+      type: "textarea",
+      placeholder: "Short introduction / experience...",
+      validation: { required: false, maxLength: 500 },
+    },
+  ] as const,
+} as const;
+
+export type EmployeeOnboardingSchema = typeof employeeOnboardingSchema;
