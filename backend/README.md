@@ -18,6 +18,9 @@ A small TypeScript + Express API that serves a dynamic form schema and handles s
 - `npm install`
 - `npm run dev` → `http://localhost:4000/rest/v1`
 
+**Deployment**
+- Live API (GCP Cloud Run): `https://matbook-assignment-579945683822.europe-west1.run.app/rest/v1`
+
 **Known Issues**
 - Search is simple (string match).
 - CSV escaping is pragmatic, not exhaustive.

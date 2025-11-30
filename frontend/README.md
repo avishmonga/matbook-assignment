@@ -18,6 +18,10 @@ A Vite + React app that fetches a dynamic schema and renders the form. Submissio
 - Ensure `.env.local` has: `VITE_API_URL=http://localhost:4000/rest/v1`
 - `npm run dev` → `http://localhost:5173/`
 
+**Deployment**
+- Live app (Firebase Hosting): `https://matbook-dynamic-form-bui-b1016.web.app/`
+- API base (Cloud Run): `https://matbook-assignment-579945683822.europe-west1.run.app/rest/v1`
+
 **Known Issues**
 - Minimal UI elements; can be enhanced with ShadCN.
 - Client-side validation is light; backend provides authoritative errors.

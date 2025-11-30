@@ -22,6 +22,10 @@ A small, clean full‑stack app that serves a dynamic form schema and renders it
   - Ensure `.env.local` has `VITE_API_URL=http://localhost:4000/rest/v1`
   - `npm run dev` → `http://localhost:5173/`
 
+**Live URLs**
+- Frontend (Firebase): `https://matbook-dynamic-form-bui-b1016.web.app/`
+- Backend (GCP Cloud Run): `https://matbook-assignment-579945683822.europe-west1.run.app/rest/v1`
+
 **Known Issues**
 - UI is intentionally minimal (no heavy component library yet).
 - Search is a simple text match over JSON; not optimized for very large datasets.
