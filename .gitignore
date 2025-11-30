@@ -8,10 +8,8 @@
 # Build outputs
 **/dist/
 
-.env
-.env.*
-**/.env
-**/.env.*
+.env.local
+**/.env.local
 
 # Logs
 *.log
