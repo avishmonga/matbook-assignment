@@ -1,0 +1,26 @@
+# General OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+**/node_modules/
+
+# Build outputs
+**/dist/
+
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Coverage
+coverage/
